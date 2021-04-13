@@ -1,0 +1,41 @@
+body {
+    margin: 0; /* prevents scrollbars */
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        'header header header header'
+        'leftSidebar content1 content2 rightSidebar'
+        'footer footer footer footer';
+}
+
+.container > div {
+    font-size: 2em;
+}
+
+.header {
+    grid-area: header;
+}
+.left-sidebar {
+    grid-area: leftSidebar;
+    overflow: auto;
+}
+.right-sidebar {
+    grid-area: rightSidebar;
+    overflow: auto;
+}
+.content-1 {
+    grid-area: content1;
+    overflow: auto;
+}
+.content-2 {
+    grid-area: content2;
+    overflow: auto;
+}
+.footer {
+    grid-area: footer;
+}
